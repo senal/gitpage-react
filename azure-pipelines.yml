@@ -1,0 +1,28 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+variables:
+- group: SampleReactPage
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+
+- script: |
+    git config --global user.email "ranga.fernando@gmail.com"
+    git config --global user.name "senal"
+    npm install
+    npm run build
+    npm run deploy -- -r https://$(reactpagePAT)@github.com/senal/gitpage-react
+  displayName: 'npm install and build then deploy'
