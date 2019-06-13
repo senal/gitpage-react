@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Welcome to Ranga's first every React page.
+          OK - now I know how to deploy React pages to git static pages.
         </a>
       </header>
     </div>
