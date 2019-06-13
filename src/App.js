@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React and deploying to git pages.
+          Welcome to Ranga's first every React page.
         </a>
       </header>
     </div>
