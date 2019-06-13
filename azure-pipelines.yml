@@ -20,5 +20,5 @@ steps:
     git config --global user.name "senal"
     npm install
     npm run build
-    npm run deploy
+    npm run deploy -- -r https://github.com/senal/gitpage-react.git
   displayName: 'npm install and build then deploy'
