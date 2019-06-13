@@ -6,6 +6,9 @@
 trigger:
 - master
 
+variables:
+- group: SampleReactPage
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -15,10 +18,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+
 - script: |
     git config --global user.email "ranga.fernando@gmail.com"
     git config --global user.name "senal"
     npm install
     npm run build
-    npm run deploy
+    npm run deploy -- -r https://$(reactpagePAT)@github.com/senal/yourrepo.git
   displayName: 'npm install and build then deploy'
