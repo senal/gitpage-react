@@ -17,7 +17,7 @@ steps:
 
 - script: |
     git config --global user.email "ranga.fernando@gmail.com"
-    git config --global user.name "Ranga Fernando"
+    git config --global user.name "senal"
     npm install
     npm run build
     npm run deploy
