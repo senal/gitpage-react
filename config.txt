@@ -1,0 +1,8 @@
+react app - open in chrome browser
+
+($env:BROWSER = "chrome") -and  (npm start)
+
+
+e3d0ff15ce7cff2ecd49326dbe40cb41dd6bb601
+
+e3d0ff15ce7cff2ecd49326dbe40cb41dd6bb601
